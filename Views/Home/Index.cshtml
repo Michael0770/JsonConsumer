@@ -1,0 +1,31 @@
+﻿@model JsonConsumer.Models.CatsListModel 
+@{
+    ViewData["Title"] = "Cats";
+}
+
+<h3>Cats</h3>
+
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <b>Male</b>
+        </div>
+        @foreach (var cat in Model.MaleOwnerCats)
+        {
+            <div class="col-md-12">@cat</div>
+        }
+    </div>
+
+    <hr />
+
+    <div class="row">
+        <div class="col-md-12">
+            <b>Female</b>
+        </div>
+        @foreach (var cat in Model.FemaleOwnerCats)
+        {
+            <div class="col-md-12">@cat</div>
+        }
+    </div>
+
+</div>
